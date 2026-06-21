@@ -1,6 +1,7 @@
 import {
   Table,
   StringColumn,
+  ReferenceColumn,
   IntegerColumn,
   DecimalColumn,
   ChoiceColumn,
@@ -17,6 +18,10 @@ export const x_2099006_reprop_property_unit = Table({
       label: 'Unit Number',
       maxLength: 40,
       mandatory: true,
+    }),
+    x_2099006_reprop_project: ReferenceColumn({
+      label: 'Development Project',
+      referenceTable: 'x_2099006_reprop_project',
     }),
     x_2099006_reprop_building: StringColumn({
       label: 'Building / Development',
@@ -72,6 +77,12 @@ export const x_2099006_reprop_property_unit = Table({
     }),
     x_2099006_reprop_floor_plan_url: UrlColumn({
       label: 'Floor Plan URL',
+    }),
+    x_2099006_reprop_map_lat: DecimalColumn({
+      label: 'Latitude',
+    }),
+    x_2099006_reprop_map_lng: DecimalColumn({
+      label: 'Longitude',
     }),
   },
 })

@@ -15,7 +15,10 @@ export const x_2099006_reprop_viewing_request = Table({
     x_2099006_reprop_unit: ReferenceColumn({
       label: 'Property Unit',
       referenceTable: 'x_2099006_reprop_property_unit',
-      mandatory: true,
+    }),
+    x_2099006_reprop_lot: ReferenceColumn({
+      label: 'Land Lot',
+      referenceTable: 'x_2099006_reprop_land_lot',
     }),
     x_2099006_reprop_booking: ReferenceColumn({
       label: 'Related Booking',

@@ -13,10 +13,26 @@ export const x_2099006_reprop_booking = Table({
   name: 'x_2099006_reprop_booking',
   label: 'Property Booking',
   schema: {
+    x_2099006_reprop_booking_type: ChoiceColumn({
+      label: 'Booking Type',
+      choices: {
+        unit: { label: 'Property Unit' },
+        lot:  { label: 'Land Lot' },
+      },
+      default: 'unit',
+      mandatory: true,
+    }),
     x_2099006_reprop_unit: ReferenceColumn({
       label: 'Property Unit',
       referenceTable: 'x_2099006_reprop_property_unit',
-      mandatory: true,
+    }),
+    x_2099006_reprop_lot: ReferenceColumn({
+      label: 'Land Lot',
+      referenceTable: 'x_2099006_reprop_land_lot',
+    }),
+    x_2099006_reprop_project: ReferenceColumn({
+      label: 'Project',
+      referenceTable: 'x_2099006_reprop_project',
     }),
     x_2099006_reprop_customer_name: StringColumn({
       label: 'Customer Name',
