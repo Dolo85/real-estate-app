@@ -1,4 +1,7 @@
-node_modules/
+.DS_Store
+.now/
 dist/
-.env
-.env.local
+node_modules/
+target/
+*.tsbuildinfo
+.jest_cache
